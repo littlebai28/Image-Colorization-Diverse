@@ -10,12 +10,13 @@ from vae.arch.vae_skipconn import vae_skipconn as vae
 from vae.arch.network import network
 from third_party.save_zhang_feats import save_zhang_feats
 
-flags = tf.flags
+flags = tf.compat.v1.flags
 
 #Directory params
 flags.DEFINE_string("out_dir", "", "")
 flags.DEFINE_string("in_dir", "", "")
 flags.DEFINE_string("list_dir", "", "")
+flags.DEFINE_string("ext", "", "")
 
 #Dataset Params
 flags.DEFINE_integer("batch_size", 32, "batch size")
